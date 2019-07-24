@@ -8,6 +8,6 @@ class EmailParser
   end
   
   def parse
-    parseArray = @email.split(/,| /).uniq
+    parseArray = @email.split(/,| /).uniq.reject { |c| c.empty? }
   end
 end
